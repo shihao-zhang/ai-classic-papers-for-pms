@@ -1,0 +1,47 @@
+name: Paper note
+description: Track one classic paper note
+title: "[Paper] "
+labels:
+  - paper
+  - status:not-started
+body:
+  - type: input
+    id: paper
+    attributes:
+      label: Paper
+      description: Short title and full title
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: Paper category
+    validations:
+      required: true
+  - type: input
+    id: note
+    attributes:
+      label: Note path
+      description: Markdown note path in this repository
+    validations:
+      required: true
+  - type: textarea
+    id: learning-goal
+    attributes:
+      label: Learning goal
+      description: What should a product manager understand after reading this paper?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Completion criteria
+      value: |
+        - [ ] Note has all required sections.
+        - [ ] Product manager insights are concrete.
+        - [ ] Understanding checks are answerable without memorizing text.
+        - [ ] No High/Medium review findings remain.
+    validations:
+      required: true

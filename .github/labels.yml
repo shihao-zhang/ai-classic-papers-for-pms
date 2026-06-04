@@ -1,0 +1,31 @@
+labels:
+  - name: paper
+    color: "0E8A16"
+    description: One classic paper learning unit
+  - name: status:not-started
+    color: "C5DEF5"
+    description: Reading or note work has not started
+  - name: status:draft
+    color: "FBCA04"
+    description: Draft note exists
+  - name: status:reviewed
+    color: "5319E7"
+    description: Note passed review
+  - name: computer-vision
+    color: "1D76DB"
+    description: Computer vision papers
+  - name: nlp
+    color: "D93F0B"
+    description: Natural language processing papers
+  - name: multimodal
+    color: "BFD4F2"
+    description: Multimodal and vision-language papers
+  - name: generative-models
+    color: "F9D0C4"
+    description: Generative and diffusion model papers
+  - name: vision-transformer-self-supervised
+    color: "C2E0C6"
+    description: Vision Transformer and self-supervised papers
+  - name: reinforcement-learning
+    color: "FAD8C7"
+    description: Reinforcement learning papers
