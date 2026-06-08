@@ -3,7 +3,7 @@
 > 分类：训练基础设施  
 > 年份：2004  
 > 论文：https://graphics.stanford.edu/papers/brookgpu/  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

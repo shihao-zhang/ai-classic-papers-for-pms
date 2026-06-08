@@ -4,7 +4,7 @@
 
 卷二不参与主 36 篇编号，单独用 `sNN` 编号；数据源见 `catalog/papers-season-2.yml`。
 
-> 当前状态：20 篇正文已全部补齐（`status: draft`），待统一独立 review 后提升至 `reviewed`。每篇笔记沿用与卷一相同的七问结构与「理解检查 + 参考要点」规范。
+> 当前状态：20 篇正文已全部补齐，并经 codex 独立 review + 维护者逐条核实修复，状态已提升至 `reviewed`。每篇笔记沿用与卷一相同的七问结构与「理解检查 + 参考要点」规范；review 记录见 `reviews/codex/`。
 
 ## 序列建模前史
 

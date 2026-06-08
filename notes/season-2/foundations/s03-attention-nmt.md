@@ -3,7 +3,7 @@
 > 分类：序列建模前史  
 > 年份：2014  
 > 论文：https://arxiv.org/abs/1409.0473  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
@@ -81,7 +81,7 @@ encoder 改用**双向 RNN**（BiRNN）：一个方向从左往右读，一个�
 
 ## 今天怎么看
 
-Bahdanau attention 作为一个 RNN 上的模块，今天已经不再被直接使用——它整个被 Transformer 的 self-attention 取代了。但它引入的核心思想，是现代 AI 最重要的概念之一：**注意力，即按相关性动态地加权读取信息**。从 Transformer 的每一层，到 RAG 的检索，到长上下文模型里对历史的关注，本质都是这个思想的延续和放大。读这篇的价值，在于看清 attention 是从哪个具体问题里长出来的，以及它和后来的 self-attention 究竟差在哪。
+Bahdanau attention 作为一个 RNN 上的模块，今天已经不再被直接使用——RNN + additive attention 这套组合被 Transformer 的 self-attention 编解码与 cross-attention 体系取代了（注意：encoder-decoder 之间的 cross-attention 仍在，只是不再架在 RNN 上）。但它引入的核心思想，是现代 AI 最重要的概念之一：**注意力，即按相关性动态地加权读取信息**。从 Transformer 的每一层，到 RAG 的检索，到长上下文模型里对历史的关注，本质都是这个思想的延续和放大。读这篇的价值，在于看清 attention 是从哪个具体问题里长出来的，以及它和后来的 self-attention 究竟差在哪。
 
 仍然重要的部分：
 
@@ -92,7 +92,7 @@ Bahdanau attention 作为一个 RNN 上的模块，今天已经不再被直接�
 
 已经被后续工作改造或替代的部分：
 
-- 作为 RNN 之上的模块，被 Transformer 的 self-attention 全面取代；
+- 作为 RNN 之上的模块，被 Transformer 的 self-attention 与 cross-attention 体系全面取代；
 - additive（加性）打分被 scaled dot-product（点积）打分取代；
 - 串行的 RNN 主干被可并行的 attention 主干取代；
 - 单一对齐被 multi-head 多视角注意力扩展。

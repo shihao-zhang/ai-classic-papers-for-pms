@@ -3,7 +3,7 @@
 > 分类：缩放与训练范式  
 > 年份：2015  
 > 论文：https://arxiv.org/abs/1503.02531  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

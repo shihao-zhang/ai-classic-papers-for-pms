@@ -14,7 +14,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1301.3781
     note_path: notes/season-2/foundations/s01-word2vec.md
-    status: draft
+    status: reviewed
 
   - id: s02
     slug: seq2seq
@@ -26,7 +26,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1409.3215
     note_path: notes/season-2/foundations/s02-seq2seq.md
-    status: draft
+    status: reviewed
 
   - id: s03
     slug: attention-nmt
@@ -38,7 +38,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1409.0473
     note_path: notes/season-2/foundations/s03-attention-nmt.md
-    status: draft
+    status: reviewed
 
   - id: s04
     slug: gnmt
@@ -50,7 +50,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1609.08144
     note_path: notes/season-2/foundations/s04-gnmt.md
-    status: draft
+    status: reviewed
 
   - id: s05
     slug: bitter-lesson
@@ -62,7 +62,7 @@ papers:
     type: essay
     paper_url: http://www.incompleteideas.net/IncIdeas/BitterLesson.html
     note_path: notes/season-2/scaling-training/s05-bitter-lesson.md
-    status: draft
+    status: reviewed
 
   - id: s06
     slug: scaling-laws
@@ -74,7 +74,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/2001.08361
     note_path: notes/season-2/scaling-training/s06-scaling-laws.md
-    status: draft
+    status: reviewed
 
   - id: s07
     slug: chinchilla
@@ -86,7 +86,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2203.15556
     note_path: notes/season-2/scaling-training/s07-chinchilla.md
-    status: draft
+    status: reviewed
 
   - id: s08
     slug: mixture-of-experts
@@ -98,7 +98,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1701.06538
     note_path: notes/season-2/scaling-training/s08-mixture-of-experts.md
-    status: draft
+    status: reviewed
 
   - id: s09
     slug: knowledge-distillation
@@ -110,7 +110,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1503.02531
     note_path: notes/season-2/scaling-training/s09-knowledge-distillation.md
-    status: draft
+    status: reviewed
 
   - id: s10
     slug: brook-for-gpus
@@ -122,7 +122,7 @@ papers:
     type: conference-paper
     paper_url: https://graphics.stanford.edu/papers/brookgpu/
     note_path: notes/season-2/infrastructure/s10-brook-for-gpus.md
-    status: draft
+    status: reviewed
 
   - id: s11
     slug: zero
@@ -134,7 +134,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1910.02054
     note_path: notes/season-2/infrastructure/s11-zero.md
-    status: draft
+    status: reviewed
 
   - id: s12
     slug: megascale
@@ -146,7 +146,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2402.15627
     note_path: notes/season-2/infrastructure/s12-megascale.md
-    status: draft
+    status: reviewed
 
   - id: s13
     slug: laion-5b
@@ -158,7 +158,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2210.08402
     note_path: notes/season-2/data/s13-laion-5b.md
-    status: draft
+    status: reviewed
 
   - id: s14
     slug: refinedweb
@@ -170,7 +170,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2306.01116
     note_path: notes/season-2/data/s14-refinedweb.md
-    status: draft
+    status: reviewed
 
   - id: s15
     slug: instructgpt
@@ -182,7 +182,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2203.02155
     note_path: notes/season-2/post-training-alignment/s15-instructgpt.md
-    status: draft
+    status: reviewed
 
   - id: s16
     slug: lora
@@ -194,7 +194,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2106.09685
     note_path: notes/season-2/post-training-alignment/s16-lora.md
-    status: draft
+    status: reviewed
 
   - id: s17
     slug: tulu-3
@@ -206,7 +206,7 @@ papers:
     type: technical-report
     paper_url: https://arxiv.org/abs/2411.15124
     note_path: notes/season-2/post-training-alignment/s17-tulu-3.md
-    status: draft
+    status: reviewed
 
   - id: s18
     slug: chain-of-thought
@@ -218,7 +218,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2201.11903
     note_path: notes/season-2/reasoning-agents/s18-chain-of-thought.md
-    status: draft
+    status: reviewed
 
   - id: s19
     slug: react
@@ -230,7 +230,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2210.03629
     note_path: notes/season-2/reasoning-agents/s19-react.md
-    status: draft
+    status: reviewed
 
   - id: s20
     slug: alphago-zero
@@ -242,4 +242,4 @@ papers:
     type: journal-paper
     paper_url: https://www.nature.com/articles/nature24270
     note_path: notes/season-2/self-play-rl/s20-alphago-zero.md
-    status: draft
+    status: reviewed
