@@ -3,7 +3,7 @@
 > 分类：计算机视觉  
 > 年份：2015  
 > 论文：https://arxiv.org/abs/1502.03167  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
@@ -84,11 +84,60 @@ BN 最大的局限是依赖 mini-batch。batch 太小、样本强相关、分布
 
 ## 理解检查
 
-1. 为什么 BN 能让模型使用更大的 learning rate？请用“训练稳定性”和“激活值尺度”解释，而不是只说“因为归一化”。
+1. 为什么 BN 能让模型使用更大的 learning rate？请用”训练稳定性”和”激活值尺度”解释，而不是只说”因为归一化”。
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- BN 把每层输入拉回稳定的均值和方差范围，防止激活值进入饱和区或数值爆炸，使梯度更新更平滑
+- 尺度受控后，大学习率带来的更新幅度不会因层间放大效应而发散
+- gamma/beta 参数让模型自己学习恢复所需尺度，不是粗暴抹平表达能力
+
+</details>
+
 2. BN 为什么会有正则化副作用？这种副作用在什么情况下可能变弱或变成风险？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- mini-batch 统计带有随机噪声，同一样本因所在 batch 不同会得到略有差异的归一化结果，起到类似数据扰动的作用
+- batch size 很大时噪声减弱，正则化副作用也随之变弱
+- 训练数据采样不均匀或 batch 内样本强相关时，统计噪声变成偏差，可能成为训练风险而非收益
+
+</details>
+
 3. 训练时使用 mini-batch statistics，推理时使用 running statistics，这个差异可能带来哪些产品交付问题？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 如果训练数据分布和线上请求分布不一致，running statistics 会偏离推理时真实分布，导致线上效果偏离离线验证
+- 微调数据量很小时，running statistics 学不好，模型表现难以解释
+- batch 构造方式（如训练时同类聚 batch）会让 running statistics 不代表总体，推理时产生静默误差
+
+</details>
+
 4. 如果你的视觉模型因为显存限制只能用 batch size = 2，你会如何在 BN、LayerNorm、GroupNorm 之间做取舍？
-5. 为什么说 BatchNorm 的方法贡献很稳，但“internal covariate shift 是主要原因”的解释需要谨慎看待？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- batch size = 2 时 BN 的 mini-batch 均值和方差估计极不稳定，训练效果会明显变差
+- GroupNorm 在每个样本内部分组统计，不依赖 batch size，更适合小 batch 的检测/分割任务
+- LayerNorm 不依赖 batch，但更适合 Transformer 等序列模型，对 CNN 卷积层不一定是首选
+
+</details>
+
+5. 为什么说 BatchNorm 的方法贡献很稳，但”internal covariate shift 是主要原因”的解释需要谨慎看待？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- BN 在大量实践中已证明能稳定训练、加速收敛，方法层面的贡献有充分工程验证
+- 后续研究（如 Santurkar et al. 2018）指出 BN 的成功可能更多来自让优化地形更平滑，而非直接减少层输入分布漂移
+- 读经典论文应区分”方法本身是否有效”和”原始解释是否完整正确”，两者可以独立成立
+
+</details>
 
 ## 延伸阅读
 

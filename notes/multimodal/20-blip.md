@@ -3,7 +3,7 @@
 > 分类：多模态与视觉语言  
 > 年份：2022  
 > 论文：https://arxiv.org/abs/2201.12086  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
@@ -108,10 +108,59 @@ BLIP 经典，不只是因为它在多个 benchmark 上刷新了结果，而是�
 ## 理解检查
 
 1. BLIP 所说的 vision-language understanding 和 generation 分别对应哪些产品能力？为什么只会图文匹配还不够？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- understanding 对应图文检索（文搜图/图搜文）、图文匹配判断，回答"是否匹配/哪个更相关"
+- generation 对应图片描述（captioning）、视觉问答答案生成，回答"请描述/请回答"
+- 只会匹配无法生成 caption 或回答开放问题，无法满足"解释给用户听"类产品需求
+
+</details>
+
 2. CapFilt 为什么要同时使用 captioner 和 filter？如果只生成 caption、不做过滤，会有什么风险？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- captioner 负责为网页图片补充更像真实描述的合成文本，替代低质量 alt-text
+- filter 负责判断图文是否真正匹配，拒绝 captioner 生成的错误或偏离描述
+- 只生成不过滤：captioner 本身会犯错，错误 caption 直接进入训练会放大模型偏差
+
+</details>
+
 3. BLIP 为什么让文本 encoder 和 decoder 共享部分参数，但不共享 self-attention 层？这反映了理解任务和生成任务的什么差异？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 理解任务（matching）需要双向 self-attention，能看完整句子的所有词才能判断匹配
+- 生成任务（captioning）需要因果 self-attention，只能看前面的词依次预测下一个词
+- 共享 embedding、cross-attention、FFN 可以降低参数量、共享视觉语言对齐知识；self-attention 机制差异决定不能共享
+
+</details>
+
 4. 在图文检索、图片描述、VQA 三个任务中，ITC、ITM、LM 分别发挥什么作用？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 图文检索：ITC 快速计算相似度召回候选，ITM 做更细粒度重排，提升检索精度
+- 图片描述：LM 目标驱动 image-grounded text decoder 逐词生成 caption
+- VQA：把问题和图片编码为多模态表示，再用 LM 生成答案（answer generation 而非固定类别分类）
+
+</details>
+
 5. 如果你要把 BLIP 的思想迁移到一个电商图片理解产品，你会如何设计数据清洗、合成标签和人工验收流程？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 数据清洗参考 CapFilt：先识别商品图与标题/描述是否真正匹配，过滤 SEO 文案、无关关联词
+- 合成标签：用已有较好模型为图片生成卖点/属性描述，再用 filter 模型或规则筛除低质量样本
+- 人工验收：对过滤后数据抽样人工复检，重点覆盖长尾类目、细粒度属性和敏感类商品
+
+</details>
 
 ## 延伸阅读
 
