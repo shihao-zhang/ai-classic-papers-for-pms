@@ -1,8 +1,8 @@
-# 第二季：大模型与 Agent 时代（扩展路线，独立于主 36 篇编号）
-# 数据源与主季 catalog/papers.yml 平行；校验见 scripts/validate_season2.rb。
-# status 取值：not-started / draft / reviewed（与主季一致）。
+# 卷二·大模型炼成（与卷一并列的另一视角；扩展卷，独立于主 36 篇编号）
+# 数据源与卷一 catalog/papers.yml 平行；校验见 scripts/validate_season2.rb。
+# status 取值：not-started / draft / reviewed（与卷一一致）。
 season: 2
-season_name: 大模型与 Agent 时代
+season_name: 大模型炼成（卷二）
 papers:
   - id: s01
     slug: word2vec

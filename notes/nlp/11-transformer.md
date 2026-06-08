@@ -202,3 +202,4 @@ RNN 的训练像排队：一个 token 的状态依赖前一个 token 的状态�
 - GPT-1：Radford 等，Improving Language Understanding by Generative Pre-Training，https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
 - T5：Raffel 等，Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer，https://arxiv.org/abs/1910.10683
 - RoPE：Su 等，RoFormer: Enhanced Transformer with Rotary Position Embedding，https://arxiv.org/abs/2104.09864
+- 跨卷·延伸（卷二·前史）：[Word2Vec](../season-2/foundations/s01-word2vec.md) · [Seq2Seq](../season-2/foundations/s02-seq2seq.md) · [Attention / Bahdanau](../season-2/foundations/s03-attention-nmt.md) —— 汇入 Transformer 的前史脉络。

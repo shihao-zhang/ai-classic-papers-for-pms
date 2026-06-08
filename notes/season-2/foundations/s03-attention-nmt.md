@@ -43,3 +43,4 @@
 
 - 原论文：
 - 后续代表工作：
+- 跨卷·延伸（卷一）：[Transformer](../../nlp/11-transformer.md) —— 把 attention 推到极致的后继。

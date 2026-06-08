@@ -43,3 +43,4 @@
 
 - 原论文：
 - 后续代表工作：
+- 跨卷·延伸（卷一）：[Transformer](../../nlp/11-transformer.md) —— encoder-decoder 思路的接棒者。

@@ -1,6 +1,6 @@
 # AI Classic Papers for Product Managers
 
-面向 AI 产品经理的 36 篇经典论文学习项目。
+面向 AI 产品经理的经典论文学习项目，分两卷：**卷一·能力演进地图**（36 篇，按能力/模态）与**卷二·大模型炼成**（20 篇，按大模型生命周期）。两卷是同一片经典论文的两种视角，不是先后续集。
 
 这个仓库不是论文 PDF 合集，也不是论文摘要搬运。它的目标是把经典论文转化成可复述、可迁移、可用于产品判断的学习材料。
 
@@ -10,20 +10,29 @@
 
 https://shihao-zhang.github.io/ai-classic-papers-for-pms/
 
-推荐从 [36 篇论文目录](papers.md) 开始读；也可以在本页下面按分类直接点进每篇论文笔记。
+推荐从 [卷一·能力演进地图（36 篇）](papers.md) 开始读；想顺着大模型的工程、数据、对齐、Agent 这条线走，看 [卷二·大模型炼成](papers-season-2.md)。也可以在本页下面按分类直接点进每篇论文笔记。
 
 如果要把每个分类生成综述 PPT，可使用 [NotebookLM Slides 提示词](docs/notebooklm-slides-prompt.md)。
 
 ## 项目目标
 
-- 用 36 篇经典论文建立 AI 技术演进的基础地图。
+- 用经典论文建立 AI 技术演进的基础地图。
 - 每篇论文沉淀一份中文导读，保留关键英文术语。
 - 关注“这篇论文改变了什么能力边界”，而不是堆公式。
 - 用 GitHub Issues 跟踪每篇论文的学习进度。
 - 用 Docsify 提供轻量浏览站点。
 - 用 NotebookLM 提示词把分类笔记转成系列化综述 slides。
 
-## 36 篇主清单
+## 两卷结构
+
+两卷切的是不同的轴，互为补充，按需取用：
+
+- **卷一·能力演进地图**：按能力/模态横切（CV / NLP / 多模态 / 生成 / 自监督 / RL），回答“AI 能做什么、靠哪些经典架构突破”。
+- **卷二·大模型炼成**：按大模型生命周期纵切（前史 → 数据 → Infra → 缩放 → 训练 → 对齐 → 推理/Agent），回答“大模型是怎么被造出来、对齐、跑起来的”。
+
+因为卷二是视角而非时间线，它会包含早于卷一 Transformer 的“前史”（Word2Vec / Seq2Seq / Attention）。强耦合的论文之间在笔记“延伸阅读”里以“跨卷·延伸”互链（如 GPT-3 ↔ InstructGPT、AlphaGo ↔ AlphaGo Zero、Transformer ↔ 前史）。
+
+## 卷一·能力演进地图（36 篇主清单）
 
 主清单来自用户提供的微信原文剪存文档，按以下六组组织：
 
@@ -34,7 +43,7 @@ https://shihao-zhang.github.io/ai-classic-papers-for-pms/
 - 视觉 Transformer 与自监督：[ViT](notes/vision-transformer-self-supervised/30-vit.md)、[MAE](notes/vision-transformer-self-supervised/31-mae.md)、[SimCLR](notes/vision-transformer-self-supervised/32-simclr.md)、[MoCo](notes/vision-transformer-self-supervised/33-moco.md)
 - 强化学习：[DQN](notes/reinforcement-learning/34-dqn.md)、[AlphaGo](notes/reinforcement-learning/35-alphago.md)、[PPO](notes/reinforcement-learning/36-ppo.md)
 
-完整数据源见 [catalog/papers.yml](catalog/papers.yml)。
+完整数据源见 [catalog/papers.yml](catalog/papers.yml)。卷二清单见 [卷二目录](papers-season-2.md)，数据源见 [catalog/papers-season-2.yml](catalog/papers-season-2.yml)。
 
 ## 每篇笔记怎么读
 
@@ -68,8 +77,8 @@ python3 -m http.server 8080
 
 ## 扩展路线
 
-用户最初提供的微信剪存清单是本仓库主线。另有一条偏大模型范式、Infra、Agent 的公开节目大纲，作为扩展路线单独保存，不参与 36 篇编号。
+用户最初提供的微信剪存清单是卷一主线。另有一条偏大模型范式、Infra、Agent 的公开节目大纲。
 
-该路线已立项为「第二季：大模型与 Agent 时代」，精选并编号 20 篇（`sNN`），分七组：序列建模前史、缩放与训练范式、训练基础设施、数据集与数据治理、后训练与对齐、推理与 Agent、自博弈与强化学习。目录见 [第二季目录](papers-season-2.md)，数据源见 [catalog/papers-season-2.yml](catalog/papers-season-2.yml)。目前已搭好骨架，正文待分批撰写。
+该路线已立项为与卷一并列的另一视角「卷二·大模型炼成」，精选并编号 20 篇（`sNN`），分七组：序列建模前史、缩放与训练范式、训练基础设施、数据集与数据治理、后训练与对齐、推理与 Agent、自博弈与强化学习。目录见 [卷二目录](papers-season-2.md)，数据源见 [catalog/papers-season-2.yml](catalog/papers-season-2.yml)。目前已搭好骨架，正文待分批撰写。
 
 原始候选清单见 [docs/alternative-roadmap.md](docs/alternative-roadmap.md)。

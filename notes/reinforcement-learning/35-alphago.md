@@ -181,3 +181,4 @@ AlphaGo 不是一个网络，而是一套分工明确的系统：两个神经网
 - 推广到多种棋类：Silver 等，A General Reinforcement Learning Algorithm that Masters Chess, Shogi, and Go through Self-Play（AlphaZero），https://arxiv.org/abs/1712.01815
 - 连环境模型一起学：Schrittwieser 等，Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model（MuZero），https://arxiv.org/abs/1911.08265
 - 搜索方法基础：Browne 等，A Survey of Monte Carlo Tree Search Methods，https://ieeexplore.ieee.org/document/6145622
+- 跨卷·延伸（卷二）：[AlphaGo Zero](../season-2/self-play-rl/s20-alphago-zero.md) —— 去人类知识、纯自我对弈的后继。

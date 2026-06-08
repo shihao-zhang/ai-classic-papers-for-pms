@@ -1,8 +1,10 @@
-# 第二季：大模型与 Agent 时代
+# 卷二·大模型炼成（数据 · Infra · 缩放 · 对齐 · Agent）
 
-第二季是主 36 篇之外的扩展路线，聚焦大模型范式、训练 Infra、数据治理、后训练与对齐、推理与 Agent。它不参与主 36 篇编号，单独用 `sNN` 编号；数据源见 [catalog/papers-season-2.yml](catalog/papers-season-2.yml)。
+卷二与[卷一·能力演进地图](papers.md)是同一片经典论文的**两种视角，不是先后续集**：卷一按能力/模态横切（CV / NLP / 多模态 / 生成 / 自监督 / RL），卷二按大模型生命周期纵切（前史 → 数据 → Infra → 缩放 → 训练 → 对齐 → 推理/Agent）。因为卷二是视角而非时间线，它会包含早于卷一 Transformer 的「前史」（Word2Vec / Seq2Seq / Attention）。
 
-> 当前状态：已立项并搭好骨架，正文待分批撰写（`status: not-started`）。每篇笔记沿用与第一季相同的七问结构与「理解检查 + 参考要点」规范。
+卷二不参与主 36 篇编号，单独用 `sNN` 编号；数据源见 [catalog/papers-season-2.yml](catalog/papers-season-2.yml)。
+
+> 当前状态：已立项并搭好骨架，正文待分批撰写（`status: not-started`）。每篇笔记沿用与卷一相同的七问结构与「理解检查 + 参考要点」规范。
 
 ## 序列建模前史
 

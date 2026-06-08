@@ -43,3 +43,4 @@
 
 - 原论文：
 - 后续代表工作：
+- 跨卷·延伸（卷一）：[AlphaGo](../../reinforcement-learning/35-alphago.md) —— 含人类先验的前身。
