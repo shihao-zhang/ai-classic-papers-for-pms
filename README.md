@@ -70,4 +70,6 @@ python3 -m http.server 8080
 
 用户最初提供的微信剪存清单是本仓库主线。另有一条偏大模型范式、Infra、Agent 的公开节目大纲，作为扩展路线单独保存，不参与 36 篇编号。
 
-见 [docs/alternative-roadmap.md](docs/alternative-roadmap.md)。
+该路线已立项为「第二季：大模型与 Agent 时代」，精选并编号 20 篇（`sNN`），分七组：序列建模前史、缩放与训练范式、训练基础设施、数据集与数据治理、后训练与对齐、推理与 Agent、自博弈与强化学习。目录见 [第二季目录](papers-season-2.md)，数据源见 [catalog/papers-season-2.yml](catalog/papers-season-2.yml)。目前已搭好骨架，正文待分批撰写。
+
+原始候选清单见 [docs/alternative-roadmap.md](docs/alternative-roadmap.md)。

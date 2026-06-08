@@ -1,5 +1,6 @@
 - [首页](README.md)
 - [36 篇论文目录](catalog.md)
+- [第二季：大模型与 Agent 时代](season-2.md)
 - [学习方法与搭建规范](building-spec.md)
 - [NotebookLM Slides 提示词](notebooklm-slides-prompt.md)
 - [术语表](glossary.md)
