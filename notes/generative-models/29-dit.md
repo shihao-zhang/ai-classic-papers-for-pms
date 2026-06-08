@@ -3,7 +3,7 @@
 > 分类：生成模型与扩散  
 > 年份：2022  
 > 论文：https://arxiv.org/abs/2212.09748  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

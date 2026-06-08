@@ -3,7 +3,7 @@
 > 分类：强化学习  
 > 年份：2016  
 > 论文：https://www.nature.com/articles/nature16961  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

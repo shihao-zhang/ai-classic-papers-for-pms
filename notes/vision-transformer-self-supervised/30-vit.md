@@ -3,7 +3,7 @@
 > 分类：视觉 Transformer 与自监督  
 > 年份：2020  
 > 论文：https://arxiv.org/abs/2010.11929  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

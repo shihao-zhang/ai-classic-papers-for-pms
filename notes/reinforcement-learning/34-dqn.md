@@ -3,7 +3,7 @@
 > 分类：强化学习  
 > 年份：2013  
 > 论文：https://arxiv.org/abs/1312.5602  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

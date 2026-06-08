@@ -309,7 +309,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1812.04948
     note_path: notes/generative-models/26-stylegan.md
-    status: draft
+    status: reviewed
 
   - id: 27
     slug: ddpm
@@ -321,7 +321,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2006.11239
     note_path: notes/generative-models/27-ddpm.md
-    status: draft
+    status: reviewed
 
   - id: 28
     slug: stable-diffusion
@@ -333,7 +333,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2112.10752
     note_path: notes/generative-models/28-stable-diffusion.md
-    status: draft
+    status: reviewed
 
   - id: 29
     slug: dit
@@ -345,7 +345,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2212.09748
     note_path: notes/generative-models/29-dit.md
-    status: draft
+    status: reviewed
 
   - id: 30
     slug: vit
@@ -357,7 +357,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2010.11929
     note_path: notes/vision-transformer-self-supervised/30-vit.md
-    status: draft
+    status: reviewed
 
   - id: 31
     slug: mae
@@ -369,7 +369,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2111.06377
     note_path: notes/vision-transformer-self-supervised/31-mae.md
-    status: draft
+    status: reviewed
 
   - id: 32
     slug: simclr
@@ -381,7 +381,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2002.05709
     note_path: notes/vision-transformer-self-supervised/32-simclr.md
-    status: draft
+    status: reviewed
 
   - id: 33
     slug: moco
@@ -393,7 +393,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1911.05722
     note_path: notes/vision-transformer-self-supervised/33-moco.md
-    status: draft
+    status: reviewed
 
   - id: 34
     slug: dqn
@@ -405,7 +405,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1312.5602
     note_path: notes/reinforcement-learning/34-dqn.md
-    status: draft
+    status: reviewed
 
   - id: 35
     slug: alphago
@@ -417,7 +417,7 @@ papers:
     type: journal-paper
     paper_url: https://www.nature.com/articles/nature16961
     note_path: notes/reinforcement-learning/35-alphago.md
-    status: draft
+    status: reviewed
 
   - id: 36
     slug: ppo
@@ -429,4 +429,4 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1707.06347
     note_path: notes/reinforcement-learning/36-ppo.md
-    status: draft
+    status: reviewed

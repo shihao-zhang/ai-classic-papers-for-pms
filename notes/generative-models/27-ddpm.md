@@ -3,7 +3,7 @@
 > 分类：生成模型与扩散  
 > 年份：2020  
 > 论文：https://arxiv.org/abs/2006.11239  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
