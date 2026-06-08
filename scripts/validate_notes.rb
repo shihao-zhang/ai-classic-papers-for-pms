@@ -33,6 +33,15 @@ CATALOGS = {
   "卷二" => "catalog/papers-season-2.yml"
 }.freeze
 
+# 截取「## 理解检查」小节正文（到下一个二级标题为止），把参考要点检查限定在该小节内。
+def understanding_check_section(body)
+  start = body.index("## 理解检查")
+  return nil unless start
+  seg = body[start..]
+  nxt = seg.index("\n## ", 1)
+  nxt ? seg[0, nxt] : seg
+end
+
 errors = []
 checked = 0
 
@@ -71,8 +80,12 @@ CATALOGS.each do |vol, rel|
 
     # 「参考要点」是正文内容，只对已撰写的 draft/reviewed 笔记强制；
     # not-started 骨架（generate_*_notes.rb 从 templates/paper-note.md 生成）尚无正文，豁免。
-    if %w[draft reviewed].include?(note_status) && !body.include?(REF_MARKER)
-      errors << "[#{vol} #{id}] 「理解检查」缺参考要点折叠块 (#{note_rel})"
+    # 检查限定在「## 理解检查」小节内（marker 须出现在该小节，并带 <details> 折叠块），
+    # 避免 marker 仅出现在其它小节/编辑批注就误判通过。
+    if %w[draft reviewed].include?(note_status)
+      uc = understanding_check_section(body)
+      ok = uc && uc.include?(REF_MARKER) && uc.include?("<details>")
+      errors << "[#{vol} #{id}] 「理解检查」小节内缺参考要点折叠块（<details>） (#{note_rel})" unless ok
     end
   end
 end
