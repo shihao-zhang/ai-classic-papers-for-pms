@@ -14,7 +14,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1301.3781
     note_path: notes/season-2/foundations/s01-word2vec.md
-    status: not-started
+    status: draft
 
   - id: s02
     slug: seq2seq
@@ -26,7 +26,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1409.3215
     note_path: notes/season-2/foundations/s02-seq2seq.md
-    status: not-started
+    status: draft
 
   - id: s03
     slug: attention-nmt
@@ -38,7 +38,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1409.0473
     note_path: notes/season-2/foundations/s03-attention-nmt.md
-    status: not-started
+    status: draft
 
   - id: s04
     slug: gnmt
@@ -50,7 +50,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1609.08144
     note_path: notes/season-2/foundations/s04-gnmt.md
-    status: not-started
+    status: draft
 
   - id: s05
     slug: bitter-lesson
@@ -62,7 +62,7 @@ papers:
     type: essay
     paper_url: http://www.incompleteideas.net/IncIdeas/BitterLesson.html
     note_path: notes/season-2/scaling-training/s05-bitter-lesson.md
-    status: not-started
+    status: draft
 
   - id: s06
     slug: scaling-laws
@@ -74,7 +74,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/2001.08361
     note_path: notes/season-2/scaling-training/s06-scaling-laws.md
-    status: not-started
+    status: draft
 
   - id: s07
     slug: chinchilla
@@ -86,7 +86,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2203.15556
     note_path: notes/season-2/scaling-training/s07-chinchilla.md
-    status: not-started
+    status: draft
 
   - id: s08
     slug: mixture-of-experts
@@ -98,7 +98,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1701.06538
     note_path: notes/season-2/scaling-training/s08-mixture-of-experts.md
-    status: not-started
+    status: draft
 
   - id: s09
     slug: knowledge-distillation
@@ -110,7 +110,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1503.02531
     note_path: notes/season-2/scaling-training/s09-knowledge-distillation.md
-    status: not-started
+    status: draft
 
   - id: s10
     slug: brook-for-gpus
