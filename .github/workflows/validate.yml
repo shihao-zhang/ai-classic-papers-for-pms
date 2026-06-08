@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: 校验卷一 catalog（36 篇结构与文件存在）
+        run: ruby scripts/validate_catalog.rb
+      - name: 校验卷二 catalog（20 篇结构与文件存在）
+        run: ruby scripts/validate_season2.rb
+      - name: 校验笔记正文（小节齐全 / 参考要点 / 状态合法且账实一致）
+        run: ruby scripts/validate_notes.rb
