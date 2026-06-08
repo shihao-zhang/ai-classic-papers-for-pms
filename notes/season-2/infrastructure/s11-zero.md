@@ -3,7 +3,7 @@
 > 分类：训练基础设施  
 > 年份：2019  
 > 论文：https://arxiv.org/abs/1910.02054  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 

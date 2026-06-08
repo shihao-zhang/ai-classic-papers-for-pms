@@ -3,11 +3,11 @@
 > 分类：序列建模前史  
 > 年份：2013  
 > 论文：https://arxiv.org/abs/1301.3781  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
-Word2Vec 用一个极简、能在十亿级语料上快速训练的浅层模型，把每个词学成一个低维稠密向量，让“词义相近”第一次变成“向量距离相近”这种可计算的几何关系；它把 embedding 确立为 NLP 的标准输入，也让“用海量无标注文本自监督地学表示”成为后来预训练范式的雏形。
+Word2Vec 用一个极简、能在十亿级语料上快速训练的浅层模型，把每个词学成一个低维稠密向量，把“词义相近”做成“向量距离相近”这种可计算、可复用的几何关系（这种分布式语义此前 NNLM、LSA 已有雏形，Word2Vec 的突破是做到了低成本、大规模、人人可用）；它把 embedding 确立为 NLP 的标准输入，也让“用海量无标注文本自监督地学表示”成为后来预训练范式的雏形。
 
 ## 背景问题
 
@@ -89,7 +89,7 @@ Word2Vec 让人印象最深的，是它学出的向量空间里出现了**线性
 
 ## 今天怎么看
 
-今天没有人会用静态词向量去做最前沿的 NLP 任务了——大模型里的 token embedding 是上下文相关的，能力远超 Word2Vec。但 Word2Vec 埋下的思想反而比当年更主流：把万物变成向量、用相似度做检索和匹配，正是向量数据库、语义搜索、RAG 的核心范式。读 Word2Vec 的价值不在记住 CBOW 和 Skip-gram 的细节，而在理解“分布式表示 + 自监督 + 几何即语义”这套底层世界观。
+今天没有人会用静态词向量去做最前沿的 NLP 任务了——大模型的输入 token embedding 仍是静态查表，但它会再经过上下文网络转成上下文相关的表示，能力远超静态词向量。但 Word2Vec 埋下的思想反而比当年更主流：把万物变成向量、用相似度做检索和匹配，正是向量数据库、语义搜索、RAG 的核心范式。读 Word2Vec 的价值不在记住 CBOW 和 Skip-gram 的细节，而在理解“分布式表示 + 自监督 + 几何即语义”这套底层世界观。
 
 仍然重要的部分：
 
@@ -100,7 +100,7 @@ Word2Vec 让人印象最深的，是它学出的向量空间里出现了**线性
 
 已经被后续工作改造或替代的部分：
 
-- 静态词向量被上下文相关表示（ELMo → BERT → 大模型的 token embedding）全面取代；
+- 静态词向量被上下文相关表示（ELMo → BERT → 大模型经上下文网络得到的表示）全面取代；
 - OOV 问题被子词切分（FastText、BPE、WordPiece）解决；
 - 词级别表示被句子、段落、文档级别的 embedding 扩展；
 - 当年昂贵的“训练词向量”如今变成调一次 embedding API 就能拿到的现成能力。
@@ -166,7 +166,7 @@ Word2Vec 让人印象最深的，是它学出的向量空间里出现了**线性
 
 - 原论文：Mikolov 等，Efficient Estimation of Word Representations in Vector Space，https://arxiv.org/abs/1301.3781
 - 姊妹论文（negative sampling 与短语向量）：Mikolov 等，Distributed Representations of Words and Phrases and their Compositionality，https://arxiv.org/abs/1310.4546
-- 后续代表工作（全局共现）：Pennington 等，GloVe: Global Vectors for Word Representation，https://nlp.stanford.edu/pubs/glove.pdf
+- 后续代表工作（全局共现）：Pennington 等，GloVe: Global Vectors for Word Representation，https://nlp.stanford.edu/projects/glove/
 - 后续代表工作（子词解决 OOV）：Bojanowski 等，Enriching Word Vectors with Subword Information (FastText)，https://arxiv.org/abs/1607.04606
 - 后续代表工作（上下文相关词向量）：Peters 等，Deep Contextualized Word Representations (ELMo)，https://arxiv.org/abs/1802.05365
 - 跨卷·延伸（卷一）：[Transformer](../../nlp/11-transformer.md) —— 词向量等前史最终的汇流处。
