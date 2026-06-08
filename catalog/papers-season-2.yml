@@ -182,7 +182,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2203.02155
     note_path: notes/season-2/post-training-alignment/s15-instructgpt.md
-    status: not-started
+    status: draft
 
   - id: s16
     slug: lora
@@ -194,7 +194,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2106.09685
     note_path: notes/season-2/post-training-alignment/s16-lora.md
-    status: not-started
+    status: draft
 
   - id: s17
     slug: tulu-3
@@ -206,7 +206,7 @@ papers:
     type: technical-report
     paper_url: https://arxiv.org/abs/2411.15124
     note_path: notes/season-2/post-training-alignment/s17-tulu-3.md
-    status: not-started
+    status: draft
 
   - id: s18
     slug: chain-of-thought
@@ -218,7 +218,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2201.11903
     note_path: notes/season-2/reasoning-agents/s18-chain-of-thought.md
-    status: not-started
+    status: draft
 
   - id: s19
     slug: react
@@ -230,7 +230,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2210.03629
     note_path: notes/season-2/reasoning-agents/s19-react.md
-    status: not-started
+    status: draft
 
   - id: s20
     slug: alphago-zero
@@ -242,4 +242,4 @@ papers:
     type: journal-paper
     paper_url: https://www.nature.com/articles/nature24270
     note_path: notes/season-2/self-play-rl/s20-alphago-zero.md
-    status: not-started
+    status: draft
