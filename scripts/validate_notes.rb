@@ -55,10 +55,10 @@ CATALOGS.each do |vol, rel|
     body = File.read(path, encoding: "UTF-8")
 
     status_line = body.lines.find { |l| l.start_with?("> 状态：") }
-    if status_line.nil?
+    note_status = status_line&.sub("> 状态：", "")&.strip
+    if note_status.nil?
       errors << "[#{vol} #{id}] 缺 front-matter 状态行（> 状态：…）: #{note_rel}"
     else
-      note_status = status_line.sub("> 状态：", "").strip
       errors << "[#{vol} #{id}] 状态值非法: #{note_status.inspect} (#{note_rel})" unless VALID_STATUSES.include?(note_status)
       if VALID_STATUSES.include?(note_status) && note_status != catalog_status
         errors << "[#{vol} #{id}] 账实不一致：笔记=#{note_status} ≠ catalog=#{catalog_status} (#{note_rel})"
@@ -69,7 +69,11 @@ CATALOGS.each do |vol, rel|
       errors << "[#{vol} #{id}] 缺小节 #{section} (#{note_rel})" unless body.include?("\n#{section}") || body.start_with?(section)
     end
 
-    errors << "[#{vol} #{id}] 「理解检查」缺参考要点折叠块 (#{note_rel})" unless body.include?(REF_MARKER)
+    # 「参考要点」是正文内容，只对已撰写的 draft/reviewed 笔记强制；
+    # not-started 骨架（generate_*_notes.rb 从 templates/paper-note.md 生成）尚无正文，豁免。
+    if %w[draft reviewed].include?(note_status) && !body.include?(REF_MARKER)
+      errors << "[#{vol} #{id}] 「理解检查」缺参考要点折叠块 (#{note_rel})"
+    end
   end
 end
 
