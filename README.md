@@ -12,6 +12,8 @@ https://shihao-zhang.github.io/ai-classic-papers-for-pms/
 
 推荐从 [36 篇论文目录](papers.md) 开始读；也可以在本页下面按分类直接点进每篇论文笔记。
 
+如果要把每个分类生成综述 PPT，可使用 [NotebookLM Slides 提示词](docs/notebooklm-slides-prompt.md)。
+
 ## 项目目标
 
 - 用 36 篇经典论文建立 AI 技术演进的基础地图。
@@ -19,6 +21,7 @@ https://shihao-zhang.github.io/ai-classic-papers-for-pms/
 - 关注“这篇论文改变了什么能力边界”，而不是堆公式。
 - 用 GitHub Issues 跟踪每篇论文的学习进度。
 - 用 Docsify 提供轻量浏览站点。
+- 用 NotebookLM 提示词把分类笔记转成系列化综述 slides。
 
 ## 36 篇主清单
 

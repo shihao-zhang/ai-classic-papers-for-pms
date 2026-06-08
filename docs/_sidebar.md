@@ -1,6 +1,7 @@
 - [首页](README.md)
 - [36 篇论文目录](catalog.md)
 - [学习方法与搭建规范](building-spec.md)
+- [NotebookLM Slides 提示词](notebooklm-slides-prompt.md)
 - [术语表](glossary.md)
 - [扩展路线](alternative-roadmap.md)
 

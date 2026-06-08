@@ -8,6 +8,7 @@
 - 先读“一句话”和“背景问题”，判断它解决的历史瓶颈。
 - 再读“核心方法”和“为什么经典”，理解它打开的能力边界。
 - 最后完成“理解检查”，确认自己能用产品语言复述。
+- 做分类综述 slides 时，使用 [NotebookLM Slides 提示词](notebooklm-slides-prompt.md)。
 
 ## 学习标准
 
@@ -23,5 +24,6 @@
 
 - [36 篇论文目录](catalog.md)
 - [学习方法与搭建规范](building-spec.md)
+- [NotebookLM Slides 提示词](notebooklm-slides-prompt.md)
 - [术语表](glossary.md)
 - [扩展路线](alternative-roadmap.md)
