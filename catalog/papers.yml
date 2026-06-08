@@ -9,7 +9,7 @@ papers:
     type: conference-paper
     paper_url: https://proceedings.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
     note_path: notes/computer-vision/01-alexnet.md
-    status: not-started
+    status: draft
 
   - id: 2
     slug: vggnet
@@ -21,7 +21,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1409.1556
     note_path: notes/computer-vision/02-vggnet.md
-    status: not-started
+    status: draft
 
   - id: 3
     slug: googlenet-inception
@@ -33,7 +33,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1409.4842
     note_path: notes/computer-vision/03-googlenet-inception.md
-    status: not-started
+    status: draft
 
   - id: 4
     slug: resnet
@@ -45,7 +45,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1512.03385
     note_path: notes/computer-vision/04-resnet.md
-    status: not-started
+    status: draft
 
   - id: 5
     slug: u-net
@@ -57,7 +57,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1505.04597
     note_path: notes/computer-vision/05-u-net.md
-    status: not-started
+    status: draft
 
   - id: 6
     slug: batch-normalization
@@ -69,7 +69,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1502.03167
     note_path: notes/computer-vision/06-batch-normalization.md
-    status: not-started
+    status: draft
 
   - id: 7
     slug: faster-r-cnn
@@ -81,7 +81,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1506.01497
     note_path: notes/computer-vision/07-faster-r-cnn.md
-    status: not-started
+    status: draft
 
   - id: 8
     slug: yolo
@@ -93,7 +93,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1506.02640
     note_path: notes/computer-vision/08-yolo.md
-    status: not-started
+    status: draft
 
   - id: 9
     slug: mobilenet
@@ -105,7 +105,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1704.04861
     note_path: notes/computer-vision/09-mobilenet.md
-    status: not-started
+    status: draft
 
   - id: 10
     slug: efficientnet
@@ -117,7 +117,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1905.11946
     note_path: notes/computer-vision/10-efficientnet.md
-    status: not-started
+    status: draft
 
   - id: 11
     slug: transformer
@@ -129,7 +129,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1706.03762
     note_path: notes/nlp/11-transformer.md
-    status: not-started
+    status: draft
 
   - id: 12
     slug: bert
@@ -141,7 +141,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1810.04805
     note_path: notes/nlp/12-bert.md
-    status: not-started
+    status: draft
 
   - id: 13
     slug: gpt-1
@@ -153,7 +153,7 @@ papers:
     type: technical-report
     paper_url: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
     note_path: notes/nlp/13-gpt-1.md
-    status: not-started
+    status: draft
 
   - id: 14
     slug: gpt-2
@@ -165,7 +165,7 @@ papers:
     type: technical-report
     paper_url: https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
     note_path: notes/nlp/14-gpt-2.md
-    status: not-started
+    status: draft
 
   - id: 15
     slug: roberta
@@ -177,7 +177,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1907.11692
     note_path: notes/nlp/15-roberta.md
-    status: not-started
+    status: draft
 
   - id: 16
     slug: t5
@@ -189,7 +189,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1910.10683
     note_path: notes/nlp/16-t5.md
-    status: not-started
+    status: draft
 
   - id: 17
     slug: gpt-3
@@ -201,7 +201,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2005.14165
     note_path: notes/nlp/17-gpt-3.md
-    status: not-started
+    status: draft
 
   - id: 18
     slug: clip
@@ -213,7 +213,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2103.00020
     note_path: notes/multimodal/18-clip.md
-    status: not-started
+    status: draft
 
   - id: 19
     slug: dall-e
@@ -225,7 +225,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2102.12092
     note_path: notes/multimodal/19-dall-e.md
-    status: not-started
+    status: draft
 
   - id: 20
     slug: blip
@@ -237,7 +237,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2201.12086
     note_path: notes/multimodal/20-blip.md
-    status: not-started
+    status: draft
 
   - id: 21
     slug: flamingo
@@ -249,7 +249,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/2204.14198
     note_path: notes/multimodal/21-flamingo.md
-    status: not-started
+    status: draft
 
   - id: 22
     slug: llava
@@ -261,7 +261,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/2304.08485
     note_path: notes/multimodal/22-llava.md
-    status: not-started
+    status: draft
 
   - id: 23
     slug: gpt-4v-dawn-of-lmms
@@ -273,7 +273,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/2309.17421
     note_path: notes/multimodal/23-gpt-4v-dawn-of-lmms.md
-    status: not-started
+    status: draft
 
   - id: 24
     slug: gan
@@ -285,7 +285,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1406.2661
     note_path: notes/generative-models/24-gan.md
-    status: not-started
+    status: draft
 
   - id: 25
     slug: vae
@@ -297,7 +297,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1312.6114
     note_path: notes/generative-models/25-vae.md
-    status: not-started
+    status: draft
 
   - id: 26
     slug: stylegan
@@ -309,7 +309,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1812.04948
     note_path: notes/generative-models/26-stylegan.md
-    status: not-started
+    status: draft
 
   - id: 27
     slug: ddpm
@@ -321,7 +321,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2006.11239
     note_path: notes/generative-models/27-ddpm.md
-    status: not-started
+    status: draft
 
   - id: 28
     slug: stable-diffusion
@@ -333,7 +333,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2112.10752
     note_path: notes/generative-models/28-stable-diffusion.md
-    status: not-started
+    status: draft
 
   - id: 29
     slug: dit
@@ -345,7 +345,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2212.09748
     note_path: notes/generative-models/29-dit.md
-    status: not-started
+    status: draft
 
   - id: 30
     slug: vit
@@ -357,7 +357,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2010.11929
     note_path: notes/vision-transformer-self-supervised/30-vit.md
-    status: not-started
+    status: draft
 
   - id: 31
     slug: mae
@@ -369,7 +369,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2111.06377
     note_path: notes/vision-transformer-self-supervised/31-mae.md
-    status: not-started
+    status: draft
 
   - id: 32
     slug: simclr
@@ -381,7 +381,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/2002.05709
     note_path: notes/vision-transformer-self-supervised/32-simclr.md
-    status: not-started
+    status: draft
 
   - id: 33
     slug: moco
@@ -393,7 +393,7 @@ papers:
     type: conference-paper
     paper_url: https://arxiv.org/abs/1911.05722
     note_path: notes/vision-transformer-self-supervised/33-moco.md
-    status: not-started
+    status: draft
 
   - id: 34
     slug: dqn
@@ -405,7 +405,7 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1312.5602
     note_path: notes/reinforcement-learning/34-dqn.md
-    status: not-started
+    status: draft
 
   - id: 35
     slug: alphago
@@ -417,7 +417,7 @@ papers:
     type: journal-paper
     paper_url: https://www.nature.com/articles/nature16961
     note_path: notes/reinforcement-learning/35-alphago.md
-    status: not-started
+    status: draft
 
   - id: 36
     slug: ppo
@@ -429,4 +429,4 @@ papers:
     type: paper
     paper_url: https://arxiv.org/abs/1707.06347
     note_path: notes/reinforcement-learning/36-ppo.md
-    status: not-started
+    status: draft
