@@ -1,6 +1,6 @@
 - [首页](README.md)
 - [卷一·能力演进地图（36 篇）](papers.md)
-- [卷二·大模型炼成（20 篇）](papers-season-2.md)
+- [卷二·大模型范式演进（20 篇）](papers-season-2.md)
 - [学习方法与搭建规范](docs/building-spec.md)
 - [NotebookLM Slides 提示词](docs/notebooklm-slides-prompt.md)
 - [术语表](docs/glossary.md)
