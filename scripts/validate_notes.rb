@@ -1,0 +1,98 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# 笔记结构与账实一致性校验（两卷通用）。
+# 在 validate_catalog.rb / validate_season2.rb（校验 catalog 本身）之外，
+# 进一步校验每篇笔记正文：
+#   1. front-matter 有 `> 状态：<值>`，且值 ∈ {not-started, draft, reviewed}
+#   2. 该状态与 catalog 中对应论文的 status 完全一致（账实一致）
+#   3. 九个必备小节齐全
+#   4. 「理解检查」下至少有一个「参考要点」折叠块
+#
+# 用法：ruby scripts/validate_notes.rb
+
+require "yaml"
+
+ROOT = File.expand_path("..", __dir__)
+VALID_STATUSES = %w[not-started draft reviewed].freeze
+REQUIRED_SECTIONS = [
+  "## 一句话",
+  "## 背景问题",
+  "## 核心方法",
+  "## 为什么经典",
+  "## 产品经理启发",
+  "## 局限与争议",
+  "## 今天怎么看",
+  "## 理解检查",
+  "## 延伸阅读"
+].freeze
+REF_MARKER = "参考要点（先自己答，再展开）"
+
+CATALOGS = {
+  "卷一" => "catalog/papers.yml",
+  "卷二" => "catalog/papers-season-2.yml"
+}.freeze
+
+# 截取「## 理解检查」小节正文（到下一个二级标题为止），把参考要点检查限定在该小节内。
+def understanding_check_section(body)
+  start = body.index("## 理解检查")
+  return nil unless start
+  seg = body[start..]
+  nxt = seg.index("\n## ", 1)
+  nxt ? seg[0, nxt] : seg
+end
+
+errors = []
+checked = 0
+
+CATALOGS.each do |vol, rel|
+  catalog = YAML.load_file(File.join(ROOT, rel))
+  catalog.fetch("papers").each do |paper|
+    id = paper["id"]
+    note_rel = paper["note_path"]
+    catalog_status = paper["status"].to_s.strip
+    path = File.join(ROOT, note_rel.to_s)
+
+    errors << "[#{vol} #{id}] catalog status 非法: #{catalog_status.inspect}" unless VALID_STATUSES.include?(catalog_status)
+
+    unless note_rel && File.exist?(path)
+      errors << "[#{vol} #{id}] 笔记缺失: #{note_rel}"
+      next
+    end
+
+    checked += 1
+    body = File.read(path, encoding: "UTF-8")
+
+    status_line = body.lines.find { |l| l.start_with?("> 状态：") }
+    note_status = status_line&.sub("> 状态：", "")&.strip
+    if note_status.nil?
+      errors << "[#{vol} #{id}] 缺 front-matter 状态行（> 状态：…）: #{note_rel}"
+    else
+      errors << "[#{vol} #{id}] 状态值非法: #{note_status.inspect} (#{note_rel})" unless VALID_STATUSES.include?(note_status)
+      if VALID_STATUSES.include?(note_status) && note_status != catalog_status
+        errors << "[#{vol} #{id}] 账实不一致：笔记=#{note_status} ≠ catalog=#{catalog_status} (#{note_rel})"
+      end
+    end
+
+    REQUIRED_SECTIONS.each do |section|
+      errors << "[#{vol} #{id}] 缺小节 #{section} (#{note_rel})" unless body.include?("\n#{section}") || body.start_with?(section)
+    end
+
+    # 「参考要点」是正文内容，只对已撰写的 draft/reviewed 笔记强制；
+    # not-started 骨架（generate_*_notes.rb 从 templates/paper-note.md 生成）尚无正文，豁免。
+    # 检查限定在「## 理解检查」小节内（marker 须出现在该小节，并带 <details> 折叠块），
+    # 避免 marker 仅出现在其它小节/编辑批注就误判通过。
+    if %w[draft reviewed].include?(note_status)
+      uc = understanding_check_section(body)
+      ok = uc && uc.include?(REF_MARKER) && uc.include?("<details>")
+      errors << "[#{vol} #{id}] 「理解检查」小节内缺参考要点折叠块（<details>） (#{note_rel})" unless ok
+    end
+  end
+end
+
+if errors.empty?
+  puts "notes ok: #{checked} notes（结构齐全、状态合法且与 catalog 一致）"
+else
+  warn errors.join("\n")
+  exit 1
+end
