@@ -3,7 +3,7 @@
 > 分类：自然语言处理  
 > 年份：2017  
 > 论文：https://arxiv.org/abs/1706.03762  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
@@ -139,11 +139,60 @@ RNN 的训练像排队：一个 token 的状态依赖前一个 token 的状态�
 
 ## 理解检查
 
-1. 如果向非技术同事解释 self-attention，你会如何说明“每个 token 都能直接看见其他 token”？这个机制为什么有利于处理长距离依赖？
-2. Multi-head attention 相比单个 attention head，多出的价值是什么？为什么不能简单把它理解成“更多 head 一定更好”？
+1. 如果向非技术同事解释 self-attention，你会如何说明”每个 token 都能直接看见其他 token”？这个机制为什么有利于处理长距离依赖？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- Query/Key/Value 机制：每个 token 问”我该关注谁”，其他 token 答”你可以用什么线索找到我”
+- RNN 里远距离 token 需要信息沿多步传递；self-attention 一层内任意两个 token 可直接建立联系
+- 代价是计算量随序列长度平方增长，长文本成本高
+
+</details>
+
+2. Multi-head attention 相比单个 attention head，多出的价值是什么？为什么不能简单把它理解成”更多 head 一定更好”？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 多个 head 并行捕捉不同子空间的关系，例如主谓关系、指代关系、位置关系
+- 单个 head 会把所有关系压到一个平均视角，容易混淆
+- 论文展示 head 有一定可解释性，但在大模型里部分 head 可能冗余或难以解释，head 越多不一定越好
+
+</details>
+
 3. Transformer 去掉 RNN 后，为什么必须加入 positional encoding？如果没有位置信息，模型会在哪些语言场景中出问题？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- Self-attention 天然处理 token 集合，不区分顺序；没有位置信息，”狗咬人”和”人咬狗”词集合相同
+- 论文用不同频率正弦、余弦函数表示位置，并加到 token embedding 上
+- 主谓关系、修饰关系、句子结构都依赖词序，缺失位置信息会导致这些判断失效
+
+</details>
+
 4. Transformer 的训练为什么更适合 GPU/TPU 并行？这种训练优势和推理阶段逐 token 生成之间有什么区别？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 训练时 self-attention 可对句内所有 token 一次性做矩阵计算，不像 RNN 需要逐步等待前一状态
+- 推理时生成第 n 个 token 仍需先生成前 n-1 个 token，串行性质未变
+- 这个”训练并行、推理串行”的不对称，是今天推理加速的重要研究方向
+
+</details>
+
 5. 从产品选型角度看，encoder、decoder-only、encoder-decoder 分别更适合哪些任务？请各举一个产品例子。
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- Encoder 更适合理解、分类、检索、匹配，例如语义搜索或内容审核
+- Decoder-only 更适合开放式生成和对话，例如聊天助手或代码补全
+- Encoder-decoder 更适合输入到输出的转换任务，例如机器翻译或文档摘要
+
+</details>
 
 ## 延伸阅读
 
@@ -153,3 +202,4 @@ RNN 的训练像排队：一个 token 的状态依赖前一个 token 的状态�
 - GPT-1：Radford 等，Improving Language Understanding by Generative Pre-Training，https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
 - T5：Raffel 等，Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer，https://arxiv.org/abs/1910.10683
 - RoPE：Su 等，RoFormer: Enhanced Transformer with Rotary Position Embedding，https://arxiv.org/abs/2104.09864
+- 跨卷·延伸（卷二·前史）：[Word2Vec](../season-2/foundations/s01-word2vec.md) · [Seq2Seq](../season-2/foundations/s02-seq2seq.md) · [Attention / Bahdanau](../season-2/foundations/s03-attention-nmt.md) —— 汇入 Transformer 的前史脉络。

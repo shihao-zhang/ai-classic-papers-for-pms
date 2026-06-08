@@ -29,3 +29,6 @@ labels:
   - name: reinforcement-learning
     color: "FAD8C7"
     description: Reinforcement learning papers
+  - name: season-2
+    color: "6F42C1"
+    description: Season 2 (LLM & Agent era) extended-track paper

@@ -3,7 +3,7 @@
 > 分类：多模态与视觉语言  
 > 年份：2023  
 > 论文：https://arxiv.org/abs/2304.08485  
-> 状态：draft
+> 状态：reviewed
 
 ## 一句话
 
@@ -97,11 +97,60 @@ LLaVA 经典，不是因为它在所有指标上压倒闭源模型，而是因�
 
 ## 理解检查
 
-1. 为什么说 LLaVA 的关键贡献不是“图片描述”，而是 visual instruction tuning？请用一个产品场景举例说明差异。
+1. 为什么说 LLaVA 的关键贡献不是”图片描述”，而是 visual instruction tuning？请用一个产品场景举例说明差异。
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 纯 captioning 模型只能输出一种固定格式的描述；instruction tuning 让模型能根据不同指令切换回答方式
+- 同一张发票，用户可以问”列出所有金额”、”这张票有没有异常”、”帮我写报销说明”——只有 instruction tuning 模型能区分任务意图
+- 数据形态变化是关键：从”图片配文字”升级为”图片+用户指令+助手回答”三元组
+
+</details>
+
 2. CLIP vision encoder、projection layer、LLM 在 LLaVA 里分别承担什么角色？如果 projection layer 对齐不好，用户体验会出现什么问题？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- CLIP vision encoder 把图片编码成视觉特征 token；LLM 理解指令并生成回答；projection layer 负责把视觉特征映射到 LLM 可理解的词元空间
+- projection layer 对齐不好：LLM 收到的视觉 token 不在正确表示空间，图片内容无法被正确理解，模型可能忽略图片或产生与图无关的幻觉回答
+- 两阶段训练的第一阶段（feature alignment）专门用来解决这个对齐问题
+
+</details>
+
 3. GPT-4 生成视觉指令数据时并没有直接看原图，而是看 caption 和 bounding box 等文本线索。这会带来哪些好处和风险？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 好处：成本低、可规模化生成多样化的对话/推理/描述样本；GPT-4 的语言能力保证问答质量
+- 风险：caption 没写到的细节（文字、品牌、材质、微表情）GPT-4 无法生成可靠问答
+- 风险：数据质量受已有标注限制，bounding box 只有对象位置，无法覆盖图表结构等信息
+
+</details>
+
 4. LLaVA-Bench 使用 GPT-4 作为 judge 有什么现实价值？为什么它又不能替代真实用户评测？
-5. 如果你要把 LLaVA 思路迁移到“电商商品图质检”产品，你会优先补哪些数据、评估和安全机制？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 现实价值：开放式回答难以用标准答案打分，GPT-4 judge 提供了可自动化的相对质量评估
+- 局限：LLaVA-Bench 规模较小（COCO 设置 30 张图/90 问），样本代表性不足
+- 局限：GPT-4 judge 的偏好受提示词和模型版本影响，与真实用户偏好、业务验收标准可能不一致
+
+</details>
+
+5. 如果你要把 LLaVA 思路迁移到”电商商品图质检”产品，你会优先补哪些数据、评估和安全机制？
+
+<details>
+<summary>参考要点（先自己答，再展开）</summary>
+
+- 数据：收集真实质检场景的”图片+质检指令+标准结论”三元组，覆盖合格/不合格/边界案例
+- 评估：不能只看平均分，要针对每类缺陷类型分别测召回率和误报率，设定业务可接受阈值
+- 安全：高风险误判必须有人工复核节点，模型输出需附带置信度或不确定性说明，保留审计记录
+
+</details>
 
 ## 延伸阅读
 
