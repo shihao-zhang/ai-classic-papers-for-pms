@@ -1,6 +1,6 @@
 # NotebookLM Slides 提示词
 
-用于把每个分类的论文笔记生成一份系列化综述 slide deck。使用时，把同一分类下的 GitHub Markdown 笔记作为 NotebookLM sources，再把下面提示词粘贴到 NotebookLM 的 slide deck 自定义提示词中。
+用于把每个分类的论文笔记生成一份系列化综述 slide deck。使用时，把同一分类下的 Markdown 笔记作为 NotebookLM sources，再把下面提示词粘贴到 NotebookLM 的 slide deck 自定义提示词中。
 
 ## 通用提示词
 

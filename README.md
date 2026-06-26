@@ -6,7 +6,7 @@
 
 ## 快速入口
 
-- 在线阅读：<https://shihao-zhang.github.io/ai-classic-papers-for-pms/>
+- 在线阅读：使用项目绑定的公开阅读域名访问。
 - 卷一目录：[能力演进地图（36 篇）](papers.md)
 - 卷二目录：[大模型范式演进（20 篇）](papers-season-2.md)
 - 渐进式阅读：[阅读地图](docs/learning-map.md)
@@ -17,7 +17,7 @@
 
 ```text
 .
-├── README.md                    # GitHub 项目总览
+├── README.md                    # 项目总览
 ├── papers.md                    # 卷一目录：36 篇能力演进地图
 ├── papers-season-2.md           # 卷二目录：20 篇大模型范式演进
 ├── catalog/                     # 两卷论文清单的结构化数据源
@@ -84,7 +84,7 @@
 
 ## 本地预览
 
-GitHub Pages 已经可以直接展示站点。本地预览只用于改内容前自查：用任意静态服务器从仓库根目录启动，例如：
+公开阅读站点已经可以直接展示内容。本地预览只用于改内容前自查：用任意静态服务器从仓库根目录启动，例如：
 
 ```bash
 python3 -m http.server 8080
