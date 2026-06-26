@@ -1,6 +1,8 @@
 - [首页](README.md)
+- [阅读地图](docs/learning-map.md)
 - [卷一·能力演进地图（36 篇）](papers.md)
 - [卷二·大模型范式演进（20 篇）](papers-season-2.md)
+- [Guided Learning 提示词](docs/guided-learning.md)
 - [学习方法与搭建规范](docs/building-spec.md)
 - [NotebookLM Slides 提示词](docs/notebooklm-slides-prompt.md)
 - [术语表](docs/glossary.md)
@@ -59,3 +61,46 @@
 - [DQN](notes/reinforcement-learning/34-dqn.md)
 - [AlphaGo](notes/reinforcement-learning/35-alphago.md)
 - [PPO](notes/reinforcement-learning/36-ppo.md)
+
+## 卷二·大模型范式演进
+
+### 序列建模前史
+
+- [Word2Vec](notes/season-2/foundations/s01-word2vec.md)
+- [Seq2Seq](notes/season-2/foundations/s02-seq2seq.md)
+- [Attention (Bahdanau)](notes/season-2/foundations/s03-attention-nmt.md)
+- [GNMT](notes/season-2/foundations/s04-gnmt.md)
+
+### 缩放与训练范式
+
+- [The Bitter Lesson](notes/season-2/scaling-training/s05-bitter-lesson.md)
+- [Scaling Laws](notes/season-2/scaling-training/s06-scaling-laws.md)
+- [Chinchilla](notes/season-2/scaling-training/s07-chinchilla.md)
+- [Mixture-of-Experts](notes/season-2/scaling-training/s08-mixture-of-experts.md)
+- [Knowledge Distillation](notes/season-2/scaling-training/s09-knowledge-distillation.md)
+
+### 训练基础设施
+
+- [Brook for GPUs](notes/season-2/infrastructure/s10-brook-for-gpus.md)
+- [ZeRO](notes/season-2/infrastructure/s11-zero.md)
+- [MegaScale](notes/season-2/infrastructure/s12-megascale.md)
+
+### 数据集与数据治理
+
+- [LAION-5B](notes/season-2/data/s13-laion-5b.md)
+- [RefinedWeb](notes/season-2/data/s14-refinedweb.md)
+
+### 后训练与对齐
+
+- [InstructGPT](notes/season-2/post-training-alignment/s15-instructgpt.md)
+- [LoRA](notes/season-2/post-training-alignment/s16-lora.md)
+- [Tulu 3](notes/season-2/post-training-alignment/s17-tulu-3.md)
+
+### 推理与 Agent
+
+- [Chain-of-Thought](notes/season-2/reasoning-agents/s18-chain-of-thought.md)
+- [ReAct](notes/season-2/reasoning-agents/s19-react.md)
+
+### 自博弈与强化学习
+
+- [AlphaGo Zero](notes/season-2/self-play-rl/s20-alphago-zero.md)
