@@ -6,7 +6,7 @@
 
 ## 快速入口
 
-- 在线阅读：使用项目绑定的公开阅读域名访问。
+- 在线阅读：https://papers.zyxooo.com/
 - 卷一目录：[能力演进地图（36 篇）](papers.md)
 - 卷二目录：[大模型范式演进（20 篇）](papers-season-2.md)
 - 渐进式阅读：[阅读地图](docs/learning-map.md)
